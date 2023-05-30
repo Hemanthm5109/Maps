@@ -19,8 +19,8 @@ public class TestAddressInformation {
          return result = AddressInformation.getDirections( originAddress,  destinationAddress);
 
         // System.assertEquals('Mock directions', result.testGetDirections);
-        System.assertEquals('10.0 mi', result.get('distance'));
-        System.assertEquals('30 mins', result.get('travelTime'));
+        System.assertEquals('360.0 mi', result.get('distance'));
+        System.assertEquals('330 mins', result.get('travelTime'));
         System.assertEquals('5.00', result.get('cost'));
     }
     public class mockHttp implements HttpCalloutMock {
