@@ -21,13 +21,13 @@ public class TestAddressInformation {
         // System.assertEquals('Mock directions', result.testGetDirections);
         System.assertEquals('360.0 mi', result.get('distance'));
         System.assertEquals('330 mins', result.get('travelTime'));
-        System.assertEquals('5.00', result.get('cost'));
+        System.assertEquals('3.00', result.get('cost'));
     }
     public class mockHttp implements HttpCalloutMock {
         public HTTPResponse respond(HTTPRequest req) {
             HttpResponse res = new HttpResponse();
             res.setHeader('Content-Type', 'application/json');
-            res.setBody('{"rows": [{"elements": [{"distance": {"value": 16093.4, "text": "10.0 mi"}, "duration": {"value": 1800, "text": "30 mins"}}]}]}');
+            res.setBody('{"rows": [{"elements": [{"distance": {"value": 16093.4, "text": "360.0 mi"}, "duration": {"value": 1800, "text": "330 mins"}}]}]}');
             res.setStatusCode(200);
             return res;
         }
